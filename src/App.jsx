@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Base from './Base'
 
 const App = () => {
   return (
@@ -7,9 +8,9 @@ const App = () => {
       <BrowserRouter>
       <Routes>
 
-        <Route path='/' element={<Base/>}>
+        <Route path='/' element={<Base />}>
 
-          {/* <Route index element={<Homepage />} /> */}
+          
           
         </Route>
       </Routes>
