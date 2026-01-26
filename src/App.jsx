@@ -9,8 +9,6 @@ const App = () => {
       <Routes>
 
         <Route path='/' element={<Base />}>
-
-          
           
         </Route>
       </Routes>

@@ -6,7 +6,7 @@ import Footer from './Components/Footer'
 const Base = () => {
   return (
     <>
-      <NavBar/>
+      <NavBar />
         <Outlet />
       <Footer />
       

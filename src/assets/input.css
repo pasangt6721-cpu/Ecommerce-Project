@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-main text-text-dark bg-bg-light overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Custom Button Styles re-implemented in Tailwind */
+  .btn-primary-custom {
+    @apply bg-primary text-white border-none px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-secondary hover:text-white;
+  }
+  .btn-outline-custom {
+    @apply border-2 border-primary text-primary px-5 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-primary hover:text-white;
+  }
+  
+  /* Zoom effect wrapper */
+  .zoom-effect {
+    @apply overflow-hidden;
+  }
+  .zoom-effect img {
+    @apply transition-transform duration-300;
+  }
+  .zoom-effect:hover img {
+    @apply scale-110;
+  }
+}
