@@ -1,10 +1,12 @@
 import React from 'react'
+import Banners from '../Components/Banners'
 
 const Hompage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Banners />
+    
+    </>
   )
 }
 
