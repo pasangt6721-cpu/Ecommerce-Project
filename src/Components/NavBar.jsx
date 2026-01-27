@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    // const { getCartCount } = useCart();
-
-    // Helper to hide badge if count is 0, optional but user asked for identicaal behavior
-    // const cartCount = getCartCount();
-    // const badgeStyle = cartCount === 0 ? { display: 'none' } : {};
-    const cartCount = 3; 
+    const [cart] = useState(() => {
+        const savedCart = localStorage.getItem('pasa-cart');
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
+    const getCartCount = () => {
+        return cart.reduce((total, item) => total + item.quantity, 0);
+    };
+    const cartCount = getCartCount();
     const badgeStyle = cartCount === 0 ? { display: 'none' } : {};
 
     return (
@@ -92,7 +94,7 @@ const Navbar = () => {
                             <Link to="/cart" className="flex items-center space-x-2 text-text-dark hover:text-primary transition-colors">
                                 <div className="relative">
                                     <i className="fas fa-shopping-cart text-xl"></i>
-                                    <span className="badge-count absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center" style={badgeStyle}>{cartCount}</span>
+                                    <span className="badge-count absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center" style={badgeStyle}> {cartCount}</span>
                                 </div>
                                 <span>Cart</span>
                             </Link>
