@@ -86,12 +86,12 @@ export const products = [
     },
     {
         id: 9,
-        name: "Smart Home Speaker",
+        name: "Smart Phone",
         price: 99.00,
         category: "Electronics",
         image: imgSpeaker,
         rating: 4.6,
-        description: "Voice-controlled smart speaker with high-fidelity sound."
+        description: "Latest model smartphone with advanced features."
     },
     {
         id: 10,
